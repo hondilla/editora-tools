@@ -1,0 +1,33 @@
+{
+    "name": "omatech/editora-tools",
+    "type": "project",
+    "description": "",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2|^8.0",
+        "cocur/slugify": "^4.0",
+        "doctrine/dbal": "^3.1",
+        "lambdish/phunctional": "^2.1",
+        "ramsey/uuid": "^4.2",
+        "symfony/console": "^5.3",
+        "symfony/dotenv": "^5.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Omatech\\EditoraTools\\": "src/"
+        }
+    },
+    "autoload-dev": {
+    },
+    "scripts": {
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

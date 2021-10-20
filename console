@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+$app->addCommands(commands());
+$app->run();
+
+function commands()
+{
+    return array_map(function($path) {
+        $command = 'Omatech\EditoraTools'.str_replace(
+            array(__DIR__.'/src', '.php', '/'),
+            array('', '', '\\'),
+            $path
+        );
+        return new $command;
+    }, glob(__DIR__.'/src/Infrastructure/Console/*Command.php'));
+}
+
+
